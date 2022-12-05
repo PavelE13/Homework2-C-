@@ -25,7 +25,7 @@ int GetNumber(string message)
 //Метод проверки на 3-х значность
 void CheckNumber(int number)
 {
-    int checknum = number / 100;
+    int checknum = Math.Abs(number) / 100;
     if (checknum < 1 || checknum > 10)
         Console.WriteLine("Введено не 3-х значное число! Прерывание!");
     else ShowNumber(number);
