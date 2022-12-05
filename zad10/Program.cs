@@ -22,12 +22,23 @@ int GetNumber(string message)
     return result;
 }
 
+//Метод проверки на 3-х значность
+void CheckNumber(int number)
+{
+    int checknum = number / 100;
+    if (checknum < 1 || checknum > 10)
+        Console.WriteLine("Введено не 3-х значное число! Прерывание!");
+    else ShowNumber(number);
+}
+
+
 //Метод возвращает 2 цифру числа
 void ShowNumber(int num)
 {
-    string strnum=num.ToString();
+    string strnum = num.ToString();
     Console.WriteLine(strnum[1]);
 }
 
+
 int num = GetNumber("Введите 3-х значное число: ");
-ShowNumber(num);
+CheckNumber(num);
