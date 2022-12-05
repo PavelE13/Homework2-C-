@@ -31,14 +31,12 @@ void CheckNumber(int number)
     else ShowNumber(number);
 }
 
-
 //Метод возвращает 2 цифру числа
 void ShowNumber(int num)
 {
     string strnum = num.ToString();
     Console.WriteLine(strnum[1]);
 }
-
 
 int num = GetNumber("Введите 3-х значное число: ");
 CheckNumber(num);
